@@ -7,6 +7,7 @@ import { HttpModule } from '@angular/http';
 // COMPONENTS
 // ****
 import { AppComponent } from './app.component';
+import { HomeComponent } from './components/home/home.component';
 
 // ****
 // FIREBASE
@@ -22,7 +23,8 @@ export const firebaseConfig = {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
