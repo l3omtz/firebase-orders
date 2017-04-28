@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFire, AuthProviders, AuthMethods, FirebaseListObservable } from 'angularfire2';
+import {MdCardModule} from '@angular/material';
+
 
 
 @Component({
@@ -16,25 +18,25 @@ export class HomeComponent implements OnInit {
   constructor(private _af: AngularFire) {
     // Make root object in DB
     this.items = this._af.database.list('/items');
+    //this.items.push({ message: "test" });
 
-    this._af.auth.subscribe(auth => {
-      if (auth) {
-        this.name = auth;
-      }
-    });
+    // @TODO AUTH METHOD -- LATER
+    // this._af.auth.subscribe(auth => {
+    //   if (auth) {
+    //     this.name = auth;
+    //   }
+    // });
   }
 
-  logIn() {
-    this._af.auth.login({
-      provider: AuthProviders.Anonymous,
-      method: AuthMethods.Anonymous
-    });
-    this.items.push({ message: "test" });
-  }
+  // @TODO LOGIN --  LATER
+  // logIn() {
+  //    this._af.auth.login({
+  //    provider: AuthProviders.Anonymous,
+  //    method: AuthMethods.Anonymous
+  //  });
+  // }
 
 
-  ngOnInit() {
-
-  }
+  ngOnInit() { }
 
 }
