@@ -43,6 +43,13 @@ p, a, input{
   font-family: 'Catamaran', sans-serif !important;
   font-weight: 300;
 }
+.head-img{
+  text-align: center;
+  padding-bottom: 1em;
+}
+.head-img img{
+  width: 20%;
+}
 .right-pane .form-control{
   background-color:#00BFA5;
   border: 1px solid #009688;
